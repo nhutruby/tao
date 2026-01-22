@@ -1,4 +1,7 @@
 # frozen_string_literal: true
 
-class User
+class User < Otao
+  include PermittableAttributes
+  field :first_name, type: :string
+  field :last_name, type: :string
 end
