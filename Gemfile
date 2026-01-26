@@ -42,4 +42,4 @@ group :development, :test do
 end
 
 # Database
-gem 'mongoid'
+gem "mongoid"

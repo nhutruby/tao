@@ -6,8 +6,7 @@ module PermittableAttributes
   module ClassMethods
     # Returns an array of all column names for the model
     def permitted_attributes
-      self.attribute_names.map(&:to_sym) - [ :created_at, :updated_at]
+      self.attribute_names.map(&:to_sym) - [ :created_at, :updated_at ]
     end
   end
-
 end
