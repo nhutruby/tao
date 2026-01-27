@@ -43,3 +43,7 @@ end
 
 # Database
 gem "mongoid"
+gem "redis"
+gem "connection_pool"
+gem "redis-clustering"
+gem "hiredis-client"
