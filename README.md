@@ -25,4 +25,4 @@ I love to build it with Elixir - a functional programming language- in the near 
 
 A good architecture changes the way we code the good back-end. 
 
-We may not use the Rails API. Using Sinatra may be better.
+We may not use the Rails API. Using Sinatra may be better. We don't need the heavy concept of MVC, using a controller and a model in one file.
