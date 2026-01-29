@@ -1,5 +1,7 @@
 #  Facebook TAO database architecture API with Ruby on Rails, MongoDB, and Redis!
 
+## Why is TAO API?
+
 One of the best Facebook technologies.
 Please check the specs: [Facebook TAO](https://research.facebook.com/publications/tao-facebooks-distributed-data-store-for-the-social-graph/)
 
