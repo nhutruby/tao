@@ -1,6 +1,6 @@
 #  Facebook TAO database architecture API with Ruby on Rails, MongoDB, and Redis!
 
-## Why is TAO API?
+## Why is TAO API
 
 If you are creating an Internet server with many tables, such as a hundred tables in a database, you are building it wrong.
 
