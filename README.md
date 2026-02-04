@@ -13,7 +13,7 @@ When we understand TAO, we know why Facebook developed the GraphSQL client.
 What we are doing now with Ruby on Rails is primarily for small projects with small user bases.
 Think different.
 
-Version 1 will be here soon. But you can check taos_controller and the two models (otao, atao).
+Version 1 will be here soon.
 
 ## Why is MongoDB
 Facebook is using MySQL, which isn't suitable for big data in only one field: data.
@@ -26,3 +26,6 @@ I love to build it with Elixir - a functional programming language- in the near 
 A good architecture changes the way we code the good back-end. 
 
 We may not use the Rails API. Using Sinatra may be better. We don't need the heavy concept of MVC, using a controller and a model in one file.
+
+## Why is only the POST method?
+Learn from Facebook GraphSQL
