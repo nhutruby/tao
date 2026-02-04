@@ -5,8 +5,20 @@ class Atao
   field :id1, type: :object_id
   field :id2, type: :object_id
   field :atype, type: :string
-
-  def  assoc_add
+  class << self
+  # Add an association
+  # @param [Hash] params Association payload
+  # @option params [String] id1 The object 1's ID
+  # @option params [String] id2 The object 2's ID
+  # @option params [String] atype The association type
+  # @option params [String] inverse_atype The inverse ossociation type
+  # @return [Boolean] true if the assoc was successfully saved, false otherwise.
+  # @raise [Mongoid::Errors::Rollback] if the record is invalid and validations fail.
+  def  assoc_add(params)
+    Atao.transaction do
+      Atao.save(id1: params[:id1], id2: params[:id2], atype: params[:atype])
+      Atao.save(id1: params[:id2], id2: params[:id1], atype: params[:inverse_atype]) if params[:inverse_atype]
+    end
   end
 
   def assoc_delete
@@ -25,5 +37,6 @@ class Atao
   end
 
   def assoc_time_range
+  end
   end
 end
