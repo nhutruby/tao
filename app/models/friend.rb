@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Friend < Atao
+class Friend
   # Add a friend
   # @param [Hash] params Friend payload
   # @option params [String] id1 The person 1's ID
@@ -9,6 +9,6 @@ class Friend < Atao
   # @raise [Mongoid::Errors::Rollback] if the record is invalid and validations fail.
   def self.add_friend(params)
     params.merge!({ atype: "friend", inverse_atype: "friend" })
-    Friend.assoc_add(params)
+    Atao.assoc_add(params)
   end
 end

@@ -47,3 +47,7 @@ gem "redis"
 gem "connection_pool"
 gem "redis-clustering"
 gem "hiredis-client"
+
+# Cache
+gem "redis"
+gem "hiredis-client"

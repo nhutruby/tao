@@ -16,8 +16,8 @@ class Atao
   # @raise [Mongoid::Errors::Rollback] if the record is invalid and validations fail.
   def  assoc_add(params)
     Atao.transaction do
-      Atao.save(id1: params[:id1], id2: params[:id2], atype: params[:atype])
-      Atao.save(id1: params[:id2], id2: params[:id1], atype: params[:inverse_atype]) if params[:inverse_atype]
+      Atao.new(id1: params[:id1], id2: params[:id2], atype: params[:atype]).save
+      Atao.new(id1: params[:id2], id2: params[:id1], atype: params[:inverse_atype]).save if params[:inverse_atype]
     end
   end
 

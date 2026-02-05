@@ -93,7 +93,7 @@ development:
 
         # The name of the replica set to connect to. Servers provided as seeds that do
         # not belong to this replica set will be ignored.
-        # replica_set: name
+        replica_set: rs0
 
         # Compressors to use for wire protocol compression. (default is to not use compression)
         # "zstd" requires zstd-ruby gem. "snappy" requires snappy gem.

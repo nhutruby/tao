@@ -61,6 +61,7 @@
     <orderEntry type="library" scope="PROVIDED" name="erb (v6.0.1, rbenv: 4.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.13.1, rbenv: 4.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.3.0, rbenv: 4.0.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hiredis-client (v0.26.4, rbenv: 4.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.14.8, rbenv: 4.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="io-console (v0.8.2, rbenv: 4.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="irb (v1.16.0, rbenv: 4.0.1) [gem]" level="application" />
@@ -106,6 +107,10 @@
     <orderEntry type="library" scope="PROVIDED" name="rainbow (v3.1.1, rbenv: 4.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.3.1, rbenv: 4.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v7.1.0, rbenv: 4.0.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redis (v5.4.1, rbenv: 4.0.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redis-client (v0.26.4, rbenv: 4.0.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redis-cluster-client (v0.13.7, rbenv: 4.0.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redis-clustering (v5.4.1, rbenv: 4.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.11.3, rbenv: 4.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.6.3, rbenv: 4.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop (v1.82.1, rbenv: 4.0.1) [gem]" level="application" />

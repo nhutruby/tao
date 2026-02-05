@@ -18,6 +18,12 @@ Version 1 will be here soon.
 ## Why is MongoDB
 Facebook is using MySQL, which isn't suitable for big data in only one field: data.
 
+Run a MongoDB cluster on your local:
+
+```
+mongod --config /opt/homebrew/etc/mongod.conf --replSet rs0 --bind_ip localhost
+```
+
 ## Why is Ruby
 Ruby is an object-oriented programming language. We can develop a website fast, but it isn't perfect for performance and real-time functions. But it's acceptable.
 
@@ -29,3 +35,9 @@ We may not use the Rails API. Using Sinatra may be better. We don't need the hea
 
 ## Why is only the POST method?
 Learn from Facebook GraphSQL
+
+## Why is Redis?
+Must have caches for all data like Facebook did.
+
+[Run a Redis cluster on your local](https://redis.io/docs/latest/operate/oss_and_stack/management/scaling/)
+
