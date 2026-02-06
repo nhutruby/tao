@@ -5,6 +5,13 @@ class Atao
   field :id1, type: :object_id
   field :id2, type: :object_id
   field :atype, type: :string
+  field :_id, type: Hash, default: -> { { id1: id1, atype: atype, id2: id2 } }
+  validates :id1, presence: true
+  validates :id2, presence: true
+  validates :atype, presence: true
+  shard_key id1: 1
+  index id1: 1
+
   class << self
   # Add an association
   # @param [Hash] params Association payload
@@ -33,7 +40,12 @@ class Atao
   def assoc_count
   end
 
-  def assoc_range
+  # Get an association list in a range
+  # @param [String] id1 The object 1's id
+  # @param [String] atype The association type
+  # return [Array] The association list
+  def assoc_range(id1, atype, pos, limit)
+    Atao.where(id: id1, atype: atype).desc(:created_at).skip(pos-1).limit(limit)
   end
 
   def assoc_time_range
