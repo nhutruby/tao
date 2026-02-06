@@ -1,8 +1,8 @@
-(0..1000).each do |i|
-user1 = User.find_or_create_by(first_name: "Nick#{i.to_s}") do |user|
-  user.last_name = 'Dual' + i.to_s
+user1 = User.find_or_create_by(first_name: "Nick") do |user|
+  user.last_name = 'Dual'
 end
-user2 = User.find_or_create_by(first_name: "Donald#{i.to_s}") do |user|
+(0..1000).each do |i|
+user2 = User.find_or_create_by(first_name: "Donald#{i}") do |user|
   user.last_name = 'Trump' + i.to_s
 end
 

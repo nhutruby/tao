@@ -45,7 +45,7 @@ class Atao
   # @param [String] atype The association type
   # return [Array] The association list
   def assoc_range(id1, atype, pos, limit)
-    Atao.where(id: id1, atype: atype).desc(:created_at).skip(pos-1).limit(limit)
+    Atao.where(id: id1, atype: atype).desc(:created_at).offset(pos).limit(limit)
   end
 
   def assoc_time_range
