@@ -40,5 +40,19 @@ module Tao
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.action_controller.perform_caching = true
+    # Change to :null_store to avoid any caching.
+    cache_servers = (7000..7005).map { |port| "redis://127.0.0.1:#{port}" }
+    config.cache_store = :redis_cache_store, {
+      redis:  Redis::Cluster.new(nodes: (7000..7005).map { |port| "redis://127.0.0.1:#{port}" }),
+
+                                               connect_timeout:    30,  # Defaults to 1 second
+                                               read_timeout:       0.2, # Defaults to 1 second
+                                               write_timeout:      0.2, # Defaults to 1 second
+                                               reconnect_attempts: 2,   # Defaults to 1
+                                               error_handler: ->(method:, returning:, exception:) {
+                                                 Rails.logger.error("[Redis Cache Error] Method: #{method}, Returning: #{returning}, Exception: #{exception.message}")
+                                               }
+    }
   end
 end
