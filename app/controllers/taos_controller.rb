@@ -15,9 +15,9 @@ class TaosController < ApplicationController
 
   # POST /groups
   def create
-    puts '..'
+    puts ".."
     puts Rails.cache.write("greeting", "Hello, world!")
-    puts '..'
+    puts ".."
     @tao = Object.const_get(tao_params["object"]).public_send(tao_params["method"], tao_params["attributes"])
     if @tao.errors.any?
       render json: @tao.errors, status: :unprocessable_content
